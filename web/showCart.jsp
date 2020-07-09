@@ -8,9 +8,14 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>$Title$</title>
+    <title>Show cart</title>
 </head>
 <body>
-$END$
+   <%@ page import="somePackage.Cart" %>
+
+   <% Cart cart = (Cart) session.getAttribute("cart"); %>
+
+   <P> Наименование: <%= cart.getName() %> <P>
+   <P> Количество: <%= cart.getQuantity() %> </p>
 </body>
 </html>
